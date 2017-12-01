@@ -1,9 +1,10 @@
 #!/bin/bash
 
+
 cd /etc/yum.repos.d/
 
 ## Install wget
-sudo yum install wget
+yum install wget
 
 ## CentOS 7.4/6.9 and Red Hat (RHEL) 7.4/6.9 users
 wget http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
