@@ -23,7 +23,7 @@ rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms
 
 ## CentOS/RHEL 7/6 ##
-yum install VirtualBox-5.1
+yum install VirtualBox-5.2
 
 ## Fedora 27/26/25/24/23/22/21/20/19 and CentOS/RHEL 7 ##
 /usr/lib/virtualbox/vboxdrv.sh setup
