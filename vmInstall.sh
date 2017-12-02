@@ -29,7 +29,7 @@ yum install VirtualBox-5.2
 /usr/lib/virtualbox/vboxdrv.sh setup
 
 ## install vagrant + dependent rpm (rsync) 
-yum -y install https://releases.hashicorp.com/vagrant/1.9.6/vagrant_1.9.6_x86_64.rpm rsync
+yum -y install https://releases.hashicorp.com/vagrant/2.0.1/vagrant_2.0.1_x86_64.rpm rsync
 
 ## install ansible
 yum install ansible -y 
