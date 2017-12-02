@@ -1,8 +1,8 @@
 #! /bin/bash
 #OK
-controller_ip=
-compute_ips=
-network_ip=
+controller_ip=192.168.33.10
+compute_ips=192.168.33.12
+network_ip=192.168.33.11
 hostnames=
 
 scriptHelper() {
