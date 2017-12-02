@@ -61,7 +61,7 @@ vagrant up
 
 
 ## run the ansible to install the openstack
-ansible-playbook -i inventory ansible.yaml
+## ansible-playbook -i inventory ansible.yaml
 
 ## ansible 
 #1. first install packstack 
