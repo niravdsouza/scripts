@@ -1,5 +1,5 @@
 #! /bin/bash
-
+#OK
 controller_ip=
 compute_ips=
 network_ip=
