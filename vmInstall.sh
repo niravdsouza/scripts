@@ -1,5 +1,10 @@
 #!/bin/bash
 
+## Pre-req
+#1. Copy all scripts and vagrantfile to /src folder
+#2. Ensure access to internet is present
+#3. Rajeev's script is added to this repo in the same folder
+#4. In mnVagrantFile, in the last para, add the script to be run
 
 cd /etc/yum.repos.d/
 
@@ -31,9 +36,6 @@ yum install VirtualBox-5.2
 ## install vagrant + dependent rpm (rsync) 
 yum -y install https://releases.hashicorp.com/vagrant/2.0.1/vagrant_2.0.1_x86_64.rpm rsync
 
-## install ansible
-yum install ansible -y 
-
 ## create vagrant directory for compute-node
 mkdir ~/compute-node 
 cp /src/comVagrantFile ~/compute-node/VagrantFile
@@ -60,17 +62,3 @@ cd ~/management-node
 vagrant up
 
 
-## run the ansible to install the openstack
-## ansible-playbook -i inventory ansible.yaml
-
-## ansible 
-#1. first install packstack 
-#2. create default answer file
-#3. run the userinput script which will edit answer file.
-#4. run the packstack with answer file.
-
-## Pre-req
-#1. copy the inventory file to the iso images. 
-#2. copy the ansible.yaml file to the iso images. 
-#3. copy the vagrant-file's to the iso images. 
-#4. copy the installation scripts to the iso images. (you can ignore this)
