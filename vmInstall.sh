@@ -6,7 +6,21 @@
 #3. Rajeev's script is added to this repo in the same folder
 #4. In mnVagrantFile, in the last para, add the script to be run
 
+## Creating all requisite directories
+mkdir -p /openstack
+cp controller.sh /openstack
+## create vagrant directory for compute-node
+mkdir -p /openstack/compute-node 
+cp comVagrantFile /openstack/compute-node/VagrantFile
+## create vagrant directory for network-node
+mkdir -p /openstack/network-node 
+cp netVagrantFile /openstack/network-node/VagrantFile
+## create vagrant directory for management-node
+mkdir -p /openstack/management-node 
+cp mnVagrantFile /openstack/management-node/VagrantFile
+
 cd /etc/yum.repos.d/
+
 
 ## Install wget
 yum install wget
@@ -36,29 +50,14 @@ yum install VirtualBox-5.2
 ## install vagrant + dependent rpm (rsync) 
 yum -y install https://releases.hashicorp.com/vagrant/2.0.1/vagrant_2.0.1_x86_64.rpm rsync
 
-## create vagrant directory for compute-node
-mkdir ~/compute-node 
-cp /src/comVagrantFile ~/compute-node/VagrantFile
-
-
-## create vagrant directory for network-node
-mkdir ~/network-node 
-cp /src/netVagrantFile ~/network-node/VagrantFile
-
-## create vagrant directory for management-node
-mkdir ~/management-node 
-cp /src/mnVagrantFile ~/management-node/VagrantFile
-
 ## run the compute-node
-cd ~/compute-node
+cd /openstack/compute-node 
 vagrant up
 
 ## run the network-node
-cd ~/network-node
+cd /openstack/network-node
 vagrant up
 
 ## run the management-node
-cd ~/management-node
+cd /openstack/management-node
 vagrant up
-
-
