@@ -11,13 +11,13 @@ mkdir -p /openstack
 cp controller.sh /openstack
 ## create vagrant directory for compute-node
 mkdir -p /openstack/compute-node 
-cp comVagrantFile /openstack/compute-node/VagrantFile
+cp comVagrantFile /openstack/compute-node/Vagrantfile
 ## create vagrant directory for network-node
 mkdir -p /openstack/network-node 
-cp netVagrantFile /openstack/network-node/VagrantFile
+cp netVagrantFile /openstack/network-node/Vagrantfile
 ## create vagrant directory for management-node
 mkdir -p /openstack/management-node 
-cp mnVagrantFile /openstack/management-node/VagrantFile
+cp mnVagrantFile /openstack/management-node/Vagrantfile
 
 cd /etc/yum.repos.d/
 
