@@ -61,3 +61,12 @@ vagrant up
 ## run the management-node
 cd /openstack/management-node
 vagrant up
+
+## Copy keys so that packstack can run
+cp /openstack/compute-node/.vagrant/machines/default/virtualbox/private_key /openstack/ComputeNode
+cp /openstack/network-node/.vagrant/machines/default/virtualbox/private_key /openstack/NetworkNode
+
+cd /openstack/management-node
+vagrant ssh << EOF
+  touch SSHWorks
+EOF
