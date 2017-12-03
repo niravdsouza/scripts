@@ -42,13 +42,13 @@ rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 yum install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-headers kernel-devel dkms
 
 ## CentOS/RHEL 7/6 ##
-yum install VirtualBox-5.2
+yum install VirtualBox-5.1
 
 ## Fedora 27/26/25/24/23/22/21/20/19 and CentOS/RHEL 7 ##
 /usr/lib/virtualbox/vboxdrv.sh setup
 
 ## install vagrant + dependent rpm (rsync) 
-yum -y install https://releases.hashicorp.com/vagrant/2.0.1/vagrant_2.0.1_x86_64.rpm rsync
+yum -y install https://releases.hashicorp.com/vagrant/1.9.6/vagrant_1.9.6_x86_64.rpm rsync
 
 ## run the compute-node
 cd /openstack/compute-node 
