@@ -66,5 +66,5 @@ vagrant up
 
 cd /openstack/management-node
 vagrant ssh << EOF
-  touch SSHWorks
+  sudo /openstack/controller.sh
 EOF
