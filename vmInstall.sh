@@ -52,6 +52,10 @@ yum -y install https://releases.hashicorp.com/vagrant/1.9.6/vagrant_1.9.6_x86_64
 
 vagrant plugin install vagrant-vbguest
 
+## run the management-node
+cd /openstack/management-node
+vagrant up
+
 ## run the compute-node
 cd /openstack/compute-node 
 vagrant up
@@ -59,14 +63,6 @@ vagrant up
 ## run the network-node
 cd /openstack/network-node
 vagrant up
-
-## run the management-node
-cd /openstack/management-node
-vagrant up
-
-## Copy keys so that packstack can run
-cp /openstack/compute-node/.vagrant/machines/default/virtualbox/private_key /openstack/ComputeNode
-cp /openstack/network-node/.vagrant/machines/default/virtualbox/private_key /openstack/NetworkNode
 
 cd /openstack/management-node
 vagrant ssh << EOF
