@@ -64,7 +64,7 @@ Vagrant.configure("2") do |config|
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-    config.vm.provision "shell", inline: <<-SHELL
+config.vm.provision "shell", inline: <<-SHELL
       ROOT_HOME="/root"
       ROOT_SSH_HOME="$ROOT_HOME/.ssh"
       ROOT_AUTHORIZED_KEYS="$ROOT_SSH_HOME/authorized_keys"
@@ -86,5 +86,5 @@ Vagrant.configure("2") do |config|
       chmod 644 "$VAGRANT_AUTHORIZED_KEYS"
       chmod 644 "$FILE_FOR_OTHER_HOSTS"
       chown -R vagrant:vagrant "$VAGRANT_SSH_HOME"
-    SHELL
+      SHELL
 end
