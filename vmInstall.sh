@@ -50,6 +50,8 @@ yum install VirtualBox-5.1
 ## install vagrant + dependent rpm (rsync) 
 yum -y install https://releases.hashicorp.com/vagrant/1.9.6/vagrant_1.9.6_x86_64.rpm rsync
 
+vagrant plugin install vagrant-vbguest
+
 ## run the compute-node
 cd /openstack/compute-node 
 vagrant up
